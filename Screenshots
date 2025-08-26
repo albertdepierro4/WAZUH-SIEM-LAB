@@ -1,0 +1,34 @@
+## Screenshots & Explanations  
+
+### Agent Connected & Active (Dashboard Overview)  
+This screenshot shows the Wazuh dashboard with the Ubuntu agent (`10.0.2.4`) successfully registered and active. The system is monitoring logs, displaying MITRE ATT&CK tactics like *Privilege Escalation* and *Persistence*, and confirming compliance checks.  
+
+![Dashboard Overview](siem.png)
+
+---
+
+### Threat Hunting – Events View  
+Here, the Threat Hunting module displays collected events from the Ubuntu agent. You can see logs related to `sudo` usage and PAM authentication, showing that Wazuh is detecting real system activity.  
+
+![Threat Hunting Events](siem2.png)
+
+---
+
+### Successful sudo to ROOT Alert  
+This screenshot highlights alerts generated when `sudo` commands were executed on the Ubuntu agent. Wazuh mapped these actions to MITRE ATT&CK tactics such as *Defense Evasion* and *Privilege Escalation*.  
+
+![Sudo Alerts](siem3.png)
+
+---
+
+### Agent Management (List of Agents)  
+This view shows the two agents created during setup. Only one (`useragent`) is active and reporting logs, while the duplicate (`Ubuntu-Agent`) remains in “never connected” status — this demonstrates troubleshooting done to fix duplicate agent conflicts.  
+
+![Agent Management](siem4.png)
+
+---
+
+### Recent Events – Valid Accounts  
+The Wazuh dashboard shows events tied to account activity, including PAM login sessions opened/closed and privilege escalation attempts. This demonstrates how Wazuh maps raw system logs into structured security events.  
+
+![Valid Accounts Events](siem5.png)
